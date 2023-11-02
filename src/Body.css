@@ -4,4 +4,21 @@ body {
 	color: #fff;
 	line-height: 1.6;
 	text-align: center;
+    a {
+        color: lightslategray;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+    a:hover {
+        color: paleturquoise;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+    p{
+        text-align: left;
+    }
+    card{
+        background-color: lightslategray;
+    }
+
 }
