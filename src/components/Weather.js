@@ -5,7 +5,7 @@ import axios from 'axios';
 // get data for given zip code
 export default function Weather(){
     const[data, setData] = useState({});
-    const url = 'https://api.weatherapi.com/v1/forecast.json?key=f8a23bb11cbf4d8ebff204810231310&q=' + '31820';
+    const url = 'https://api.weatherapi.com/v1/forecast.json?key=f8a23bb11cbf4d8ebff204810231310&q=31820';
     const [isFahrenheit, setIsFahrenheit] = useState(true); //Default to F
 
     // here we get the current weather
@@ -40,6 +40,7 @@ export default function Weather(){
     const toggleUnit = () => {
         setIsFahrenheit(!isFahrenheit);
     }
+  
     
     return(
         <div className='card m-4 p-4 weather-container h-25'>
