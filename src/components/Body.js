@@ -1,4 +1,5 @@
 import News from "./News";
+import Weather from "./Weather";
 
 const Body = () => {
     return(
@@ -65,7 +66,7 @@ const Body = () => {
              */}
 
              <News />
-
+             <Weather />
         </div>
     )
 

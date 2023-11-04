@@ -6,11 +6,13 @@ import axios from 'axios';
 export default function Weather(){
     const[data, setData] = useState({});
     const url = 'https://api.weatherapi.com/v1/forecast.json?key=f8a23bb11cbf4d8ebff204810231310&q=' + '31820';
+    const [isFahrenheit, setIsFahrenheit] = useState(true); //Default to F
+
     // here we get the current weather
     useEffect(() => {
         axios.get(url)
         .then((response) => {
-            console.log(response);
+            //console.log(response);
             setData(response.data);
         })
         .catch(function(error) {
@@ -34,30 +36,54 @@ export default function Weather(){
         greeting = "Good evening";
     }
 
-    //TODO: add choice for C or F temps
-
-
+    //Switches unit choice state
+    const toggleUnit = () => {
+        setIsFahrenheit(!isFahrenheit);
+    }
+    
     return(
-        <React.Fragment>
-            {data.location ? (
-            <div className='card m-4 p-3'>
-                <h1>{greeting}</h1>
-                <p>{data.location.name}, {data.location.region}</p>
-                <img src={'https:' + data.current.condition.icon} height="64" width="64" alt={data.current.condition.text}></img>
-                <p>{data.current.condition.text}</p>
-                <p>{data.current.temp_f}°F</p>
-                <p>{data.forecast.forecastday[0].day.daily_chance_of_rain}</p>
-            </div> ) : (
-                <p>Loading</p>
-            )}
-        </React.Fragment>
+        <div className='card m-4 p-4 weather-container h-25'>
+
+            <React.Fragment>
+                {data.location ? (
+                    <div className='card-body'>
+                    <p className='display-6'>{greeting}</p>
+                    <p>{data.location.name}, {data.location.region}</p>
+                    <p>{ isFahrenheit ?
+                    data.current.temp_f : data.current.temp_c} <span className='m-0 p-0' 
+                style={{cursor: 'pointer', display: ''}} onClick={toggleUnit}>
+                    {isFahrenheit ? "°F" : "°C"}</span></p>
+                    <br></br>
+                    <img src={'https:' + data.current.condition.icon} style={{display: 'flex', float: 'inline-end'}} className='img' height="64" width="64" alt={data.current.condition.text}></img>
+                    <p>{data.current.condition.text}</p>
+                    
+                   
+                
+
+                    <p>{data.forecast.forecastday[0].day.daily_chance_of_rain}% chance of rain</p>
+                    <p>{}</p>
+                    
+                    </div>
+            ) : (
+                    <p>Loading</p>
+                )}
+                
+                {data.forecast && data.forecast.forecastday[0].astro.is_moon_up === 1 ? 
+                  <p>Moon phase: {data.forecast.forecastday[0].astro.moon_phase}</p> 
+                  :null}
+                
+            </React.Fragment>
+
+        </div>
     );
 }
 
 /*Desired weather component functions:
-- Display temperature
-- Display condition icon
-- Display chance of rain
-- Display sunrise/sunset times if within next 2 hours
-- Display moon phase after sunset
+- Display temperature y
+- Display condition icon y
+- Display chance of rain y
+- Allow choice of c/f y
+- Display moon phase when moon is up y
 */
+//Todo: fix colors, make pretty
+
