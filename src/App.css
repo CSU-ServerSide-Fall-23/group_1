@@ -28,6 +28,7 @@
 }
 
 .news-container {
+  min-width: 433px;
   max-width: 433px;
   height: 732px;
   overflow-y: scroll;

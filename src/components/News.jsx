@@ -6,7 +6,7 @@ const News = () => {
     const formattedDate = today.toISOString
 
     const getNews = async () => {
-        const apiKey = process.env.REACT_APP_NEWS_API_KEY
+        const apiKey = "50ce85c64e8c8f8c2c0b4026a902e686"
         try{
             const response = await fetch(`https://gnews.io/api/v4/top-headlines?lang=en&from=${formattedDate}&apikey=${apiKey}`)
             const data = await response.json()
