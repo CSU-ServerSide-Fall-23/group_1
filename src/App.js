@@ -3,6 +3,7 @@ import './App.css';
 import './Body.css';
 import Nav from './components/Nav';
 import Body from './components/Body';
+import Weather from './components/Weather';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Body>
 
       </Body>
+      <Weather />
     </div>
   );
 }
