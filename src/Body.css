@@ -22,3 +22,6 @@ body {
     }
 
 }
+.body-container {
+    max-width: 100%;
+}
