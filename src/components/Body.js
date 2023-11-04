@@ -1,6 +1,8 @@
+import News from "./News";
+
 const Body = () => {
     return(
-        <div class ="container float-start">
+        <div class ="container float-start d-flex justify-content-evenly p-3 body-container">
             <br></br>
             <div class="card" style={{width: "18rem"}}>
                 <div class="card-header bg-secondary text-white">
@@ -62,6 +64,9 @@ const Body = () => {
             </img>
             </p>
              */}
+
+             <News />
+
         </div>
     )
 
