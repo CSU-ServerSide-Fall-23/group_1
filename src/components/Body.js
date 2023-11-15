@@ -67,6 +67,9 @@ const Body = () => {
 
              <News />
              <Weather />
+             <footer>
+                testing for the One api
+             </footer>
         </div>
     )
 
