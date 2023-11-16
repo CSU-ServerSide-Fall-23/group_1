@@ -1,5 +1,24 @@
 import News from "./News";
 import Weather from "./Weather";
+import TheOneApi from "./TheOneApi";
+//import axios from 'axios';
+
+// let oneApiUrl ='https://the-one-api.dev/v2/quote'
+// let oneApiKey = 'ECpzqigl8778NRrj2KKZ'
+
+// axios.get(oneApiUrl, {
+//     headers: {
+//         'Authorization' : 'Bearer ECpzqigl8778NRrj2KKZ'
+//     }
+//     })
+//     .then(response=>{
+//         const oneApiData = response.data;
+//         console.log(response);
+//     })
+//     .catch(function (error) {
+//         // handle error
+//         console.log(error);
+//     })
 
 const Body = () => {
     return(
@@ -67,9 +86,8 @@ const Body = () => {
 
              <News />
              <Weather />
-             <footer>
-                testing for the One api
-             </footer>
+             <TheOneApi />
+
         </div>
     )
 
