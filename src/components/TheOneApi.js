@@ -12,6 +12,7 @@ class TheOneApi extends Component{
 
 
     componentDidMount(){
+        const randomQuoteId = Math.floor(Math.random() *1000)
         const oneApiUrl = 'https://the-one-api.dev/v2/quote'
         axios.get(oneApiUrl, {
             headers: {
@@ -19,7 +20,7 @@ class TheOneApi extends Component{
             }
             })
             .then(response=>{
-                this.setState({theOneApiData: response.data.docs})
+                this.setState({theOneApiData: response.data.docs[randomQuoteId]})
                 console.log(response);
                 console.log(this.state)
             })
@@ -30,17 +31,14 @@ class TheOneApi extends Component{
     }
 
     render(){
-        console.log("break point")
-        console.log(this.state)
-        const apiData = new Array(this.state)
-        let quote = apiData[5];
+        let quote = this.state.theOneApiData.dialog
+        console.log(this.state.theOneApiData.dialog)
         return(
-            <div class="container">
+            <footer>
             <React.Fragment>
-                red<br></br>
                 LOTR Quote: {quote}
             </React.Fragment>
-            </div>
+            </footer>
         )
 
     }
