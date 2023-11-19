@@ -10,22 +10,24 @@ class TheOneApi extends Component{
     }
 
     componentDidMount(){
-        const randomQuoteId = Math.floor(Math.random() *1000)
-        const oneApiUrl = 'https://the-one-api.dev/v2/quote'
-        axios.get(oneApiUrl, {
-            headers: {
-                'Authorization' : 'Bearer ECpzqigl8778NRrj2KKZ'
-            }
+        if (Object.keys(this.state.theOneApiData).length === 0) { //so it only calls the API once
+            const randomQuoteId = Math.floor(Math.random() *1000)
+            const oneApiUrl = 'https://the-one-api.dev/v2/quote'
+            axios.get(oneApiUrl, {
+                headers: {
+                    'Authorization' : 'Bearer ECpzqigl8778NRrj2KKZ'
+                }
+                })
+                .then(response=>{
+                    this.setState({theOneApiData: response.data.docs[randomQuoteId]})
+                    //console.log(response);
+                    //console.log(this.state)
+                })
+                .catch(function (error) {
+                    //handle error
+                    console.log(error);
             })
-            .then(response=>{
-                this.setState({theOneApiData: response.data.docs[randomQuoteId]})
-                //console.log(response);
-                //console.log(this.state)
-            })
-            .catch(function (error) {
-                //handle error
-                console.log(error);
-            })
+        }
     }
 
     render(){
