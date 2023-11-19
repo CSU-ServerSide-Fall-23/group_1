@@ -6,8 +6,6 @@ const GoogleSearch = () => {
               {/* <button className="btn btn-outline-success" type="submit">Search</button> */}
             </form>
             <div class="gcse-searchresults"></div>
-
-
         </div>
     )
 }

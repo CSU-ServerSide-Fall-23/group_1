@@ -25,7 +25,7 @@ const News = () => {
     }, [])
 
     return (
-        <div className="card rounded text-light text-start p-3 gy-3 news-container">
+        <div className="card p-3 gy-3 news-container">
             <p className="display-6">News</p>
             {topNews && 
                 topNews.map((headline, key) => {

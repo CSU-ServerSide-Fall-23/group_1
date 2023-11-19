@@ -32,11 +32,11 @@ class TheOneApi extends Component{
         let quote = this.state.theOneApiData.dialog
         //console.log(this.state.theOneApiData.dialog)
         return(
-            <footer>
+            <div className="lotr">
             <React.Fragment>
                 LOTR Quote: {quote}
             </React.Fragment>
-            </footer>
+            </div>
         )
 
     }
