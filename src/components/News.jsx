@@ -32,7 +32,7 @@ const News = () => {
                     return (
                         <div className="row p-3 align-items-center news-row" key={key}>
                             <img className="col-1 object-fit-cover rounded news-img" src={headline.image} alt={`Image relating to ${headline.title}`}></img>
-                            <p className="col news-headline">{headline.title.substring(0, 100)}</p>
+                            <p className="col news-headline"><a href={headline.url} target="_blank">{headline.title.substring(0, 100)}</a></p>
 
                         </div>
                     )
