@@ -20,7 +20,7 @@ const Body = () => {
                         <Trivia />
                     </div>
                 </div>
-                
+
             </div>
             <TheOneApi />
         </div>

@@ -6,9 +6,10 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  //<React.StrictMode>
     <App />
-  </React.StrictMode>
+  //</React.StrictMode>
+  //removed strictMode as it was the cause for the bug that displayed two LOTR quotes istead of one
 );
 
 // If you want to start measuring performance in your app, pass a function
