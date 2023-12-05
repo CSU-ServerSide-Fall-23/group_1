@@ -6,7 +6,6 @@ const RecommendedSites = () => {
 
     const makeList = () => {
         var sitelist = CONFIG.websites;
-        console.log(sitelist);
         setSites(sitelist);
     return sitelist;
 }
@@ -14,20 +13,17 @@ useEffect(() => {
     makeList();
 }, [])
 return(
-<div class="card recSites">
-                <p className="display-6 p-3 m-0 title">
-                    Links
-                </p>
-                <ul class="list-group list-group-flush px-3">
-                  {sites.map((site, x) => (
-                    <li className='list-group-item'>
-                        <img src={site.icon} alt={site.name} className='icon'></img>
-                        <a href={site.url} key={site.id}>{site.name}</a>
-                    </li>
-                  ))}
-                                          
-                </ul>
-            </div>
+    <div className="card p-3 recSites">
+        <p className="display-6 m-0 title">Links</p>
+        <ul className="list-group list-group-flush px-3">
+            {sites.map((site) => (
+            <li className='list-group-item' key={site.id}>
+                <img src={site.icon} alt={site.name} className='icon'></img>
+                <a className='site px-2' href={site.url} >{site.name}</a>
+            </li>
+            ))}                      
+        </ul>
+    </div>
 )
 
 }

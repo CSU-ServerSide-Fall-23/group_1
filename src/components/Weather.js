@@ -39,15 +39,16 @@ export default function Weather(){
 
         //Determine time-based greeting :)
         const date = new Date();
-        const time = date.getHours();
+        const hour = date.getHours();
+        var time = date.toLocaleTimeString("en-US", {hour: '2-digit', minute:'2-digit'});
         let greeting = '';
-        if(time < 4){
+        if(hour < 4){
             greeting = "Good night";
         }
-        else if (time >= 4 && time < 11){
+        else if (hour >= 4 && hour < 11){
             greeting = "Good morning";
         }
-        else if (time >= 11 && time < 17){
+        else if (hour >= 11 && hour < 17){
             greeting = "Good afternoon";
         }else{
             greeting = "Good evening";
@@ -60,24 +61,33 @@ export default function Weather(){
 
     return(
         <div className='card weather-container'>
-
+            
             <React.Fragment>
+                
                 {data.location ? (
-                    <div className='card-body'>
-                    <img src={'https:' + data.current.condition.icon} style={{display: 'flex', float: 'inline-end'}} className='img' height="64" width="64" alt={data.current.condition.text}></img>
+                    <div className='card-body position-relative'>
+                 
                     <p className='display-6 title'>{greeting}, {CONFIG.name}</p>
-                    <p>{data.location.name}, {data.location.region}</p>
-                    <p>{data.current.condition.text}</p>
-                    <p>{ isFahrenheit ?
-                    data.current.temp_f : data.current.temp_c} °<a className='m-0 p-0'
-                    style={{cursor: 'pointer', display: ''}} onClick={toggleUnit}>
-                    {isFahrenheit ? "F" : "C"}</a></p>
+                    <div id='weatherStats' className='row text-center'>
+                        <div className='col'>
 
-                    
-
-                    <p>{data.forecast.forecastday[0].day.daily_chance_of_rain}% chance of rain</p>
-                    <p>{}</p>
-
+                            <p>{data.location.name}, {data.location.region}</p>
+                            <p>{data.current.condition.text}</p>
+                        </div>
+                        <div className='col'>
+                            <p>{ isFahrenheit ?
+                                data.current.temp_f : data.current.temp_c} °<a className='m-0 p-0'
+                                style={{cursor: 'pointer', display: ''}} onClick={toggleUnit}>
+                                {isFahrenheit ? "F" : "C"}</a></p>
+                            <p>{data.forecast.forecastday[0].day.daily_chance_of_rain}% chance of rain</p>
+                        </div>
+                    </div>
+                    <div className='row text-center'>
+                        <div className='col'>
+                            <p className='clock m-0 align-middle'>{time}</p>
+                        <img src={'https:' + data.current.condition.icon} className='img weatherIcon' height="64" width="64" alt={data.current.condition.text}></img>
+                        </div>
+                            </div>
                     </div>
             ) : (
                     <p>Loading</p>
@@ -86,6 +96,7 @@ export default function Weather(){
                 {data.forecast && data.forecast.forecastday[0].astro.is_moon_up === 1 && data.current.is_day !== 1 ?
                   <p>Moon phase: {data.forecast.forecastday[0].astro.moon_phase}</p>
                   :null}
+                    
 
             </React.Fragment>
 

@@ -20,24 +20,18 @@ class TheOneApi extends Component{
                 })
                 .then(response=>{
                     this.setState({theOneApiData: response.data.docs[randomQuoteId]})
-                    //console.log(response);
-                    //console.log(this.state)
                 })
                 .catch(function (error) {
-                    //handle error
-                    console.log(error);
+                    console.error(error);
             })
         }
     }
 
     render(){
         let quote = this.state.theOneApiData.dialog
-        //console.log(this.state.theOneApiData.dialog)
         return(
-            <div className="lotr">
-            <React.Fragment>
-                LOTR Quote: {quote}
-            </React.Fragment>
+            <div id="lotr">
+                <p>LOTR Quote: {quote}</p>
             </div>
         )
 

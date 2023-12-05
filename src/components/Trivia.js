@@ -19,13 +19,12 @@ export default function Trivia(){
     useEffect(() => {
         axios.get(url)
         .then((response) => {
-            console.log(response);
             setData(response.data);
             setSelectedAnswer(null);
         })
         .catch(function(error) {
-            console.log("trivia error")
-            console.log(error);
+            console.error("trivia error")
+            console.error(error);
         });
     }, []);
 
@@ -41,6 +40,7 @@ export default function Trivia(){
         <div className='card my-4 trivia-container'>
             <React.Fragment>
                 <div className='card-body'>
+                    <p className='display-6 title m-0'>Trivia</p>
                         {data.results ? (
                             <React.Fragment>
                                 <p className='trivia-question'>{data.results[0].question}</p>
@@ -49,7 +49,7 @@ export default function Trivia(){
                                         {shuffleAnswers([...data.results[0].incorrect_answers, data.results[0].correct_answer]).map((answer, index) => (
                                             <button 
                                                 key={index} 
-                                                className={`m-1 btn ${
+                                                className={`m-2 btn ${
                                                     selectedAnswer === answer ? 
                                                         isCorrectAnswer(answer) ? 'correct' : 'incorrect' 
                                                         : 'notAnswered'}`}

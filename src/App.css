@@ -1,6 +1,5 @@
-
 .title{
-  font-family:    'Stoke';
+  font-family: 'Stoke';
 }
 p {
   font-family: 'Montserrat',  Arial, Helvetica, sans-serif;
@@ -13,8 +12,16 @@ body {
   text-align: left;
 }
 
+.news-headline,
+.news-source {
+  margin-bottom: 0;
+  height: fit-content;
+}
 .body-container {
   max-width: 100%;
+}
+.site{
+  color: #03dac5;
 }
 
 .card {
@@ -39,8 +46,7 @@ body {
 }
 
 a {
-  padding-left: 10px;
-  color: #03DAC5;
+  color: #f5f5f5;
   background-color: transparent;
   text-decoration: none;
 }
@@ -49,14 +55,10 @@ a:hover {
   color: #70EFDE;
   text-decoration: underline;
 }
-.navbar-brand {
-  color: #03DAC5;
-}
+
 .news-container {
   min-width: 433px;
   height: 732px;
-  overflow-y: scroll;
-  background-color: #000;
 }
 
 .news-row {
@@ -67,35 +69,21 @@ a:hover {
   border-bottom: none;
 }
 
-.news-headline,
-.news-source {
-  margin-bottom: 0;
-  height:fit-content;
-  overflow-y: scroll; 
-  text-indent: -0.6em;
-}
 
-.news-source {
-  text-decoration: none;
-}
 
 .news-img {
   height: 60px;
   width: 90px;
 }
 
-.lotr{
+#lotr{
   text-align: center; 
-    color: white;
     position:fixed;
     left:0px;
     bottom:0px;
     height:30px;
     width:100%;
     background:#121212;  
-}
-.trivia-question {
-  font-size: larger;
 }
 
 .btn.incorrect {
@@ -120,6 +108,7 @@ a:hover {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-.recSites {
-  height: 732px;
+.clock, .weatherIcon{
+  display: inline-block;
+  font-size: xx-large;
 }

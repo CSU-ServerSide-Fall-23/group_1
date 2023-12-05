@@ -6,7 +6,6 @@
     "displayWeather": true,
     "displayTrivia": true,
     "displayQuotes": true,
-    "backgroundImage": true,
     "backgroundImageURL": "https://images.unsplash.com/photo-1557683316-973673baf926",
     "websites": 
         [
@@ -43,7 +42,7 @@
         {
             "id": "6",
             "name": "Figma",
-            "url": "figma.com",
+            "url": "https://www.figma.com",
             "icon":"https://icon.horse/icon/figma.com"
         },
         {
@@ -67,7 +66,7 @@
         {
             "id": "10",
             "name": "Canva",
-            "url": "canva.com",
+            "url": "https://www.canva.com",
             "icon":"https://icon.horse/icon/canva.com"
         },
         {

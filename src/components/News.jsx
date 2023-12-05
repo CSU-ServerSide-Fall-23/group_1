@@ -12,7 +12,6 @@ const News = () => {
             
             const data = await response.json()
             if(data){
-                console.log(data)
                 setTopNews(data.articles)
             }
         }
@@ -26,16 +25,15 @@ const News = () => {
     }, [])
 
     return (
-        <div className="card p-3 gy-3 news-container">
-            <p className="display-6 title">News</p>
+        <div className="card p-3 news-container">
+            <p className="display-6 title m-0">News</p>
             <ul className="list-group list-group-flush px-3">
             {topNews && 
                 topNews.map((headline, key) => {
                     return (
                         <li className="row py-2 align-items-center news-row" key={key}>
-                            <img className="col-1 object-fit-cover rounded news-img" src={headline.image} alt={`Image relating to ${headline.title}`}></img>
+                            <img className="col-1 object-fit-cover rounded news-img" src={headline.image} alt={`${headline.title}`}></img>
                             <p className="col news-headline"><a href={headline.url} target="_blank">{headline.title.substring(0, 200)}</a></p>
-
                         </li>
                     )
                 })
