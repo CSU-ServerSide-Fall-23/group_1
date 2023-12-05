@@ -4,6 +4,8 @@ This project is a customizable home page containing useful widgets.
 Each widget connects to an API to bring the latest news, weather, Lord of the Rings quotes, 
 recommended sites, and trivia to your start page.
 
+StartPage is deployed [on Render](https://group-1-sswd-project.onrender.com/#gsc.tab=0).
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Packages
