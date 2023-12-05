@@ -1,75 +1,68 @@
-# Getting Started with Create React App
+# StartPage
+
+This project is a customizable home page containing useful widgets.
+Each widget connects to an API to bring the latest news, weather, Lord of the Rings quotes, 
+recommended sites, and trivia to your start page.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Packages
+This project uses react with axios and cypress packages.
+Be sure to install these packages if you do not already have them installed.
 
-In the project directory, you can run:
+## Widgets
 
-### `npm start`
+### Recommended Sites
+This widget pulls the url and website icon from the user Config json file.
+There are popular websites already pre-loaded into the start page.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**To customize the recommended sites**: simply update the userConfig json file with your favorite website URLs.
+Follow the examples in userConfig to utilize icon.horse to get the website's logo.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Weather
+This widget pulls the lates weather information from WeatherAPI.
+The current temperature and forecast are displayed in the widget.
+The widget also uses your local time to display the appropriate icon for the daytime or nighttime.
+This widget also displays the accurate moon phase.
 
-### `npm test`
+**To customize the Weather widget**: update the userConfig json file with your zip code.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### News
+This widget pulls the latest top news headlines from the GNews API.
+The current top headlines display the image associated with the article.
+When clicked, each headline will take you to the article's website in a new tab for easy reading.
 
-### `npm run build`
+### Trivia
+This widget generates fun trivia questions from Open Trivia DB.
+Answer options are shuffled, and answers will display green or red as correct or incorrect.
+New questions will be continue to be populated as you answer trivia items.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### LOTR Quote Generator
+This widget generates a randomized LOTR quote from The One API at the bottom of the start page.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Google Search Bar
+This widget uses Google's Search API to bring a quick and easy way to search the web right to the start page.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Customization
+It is recommended that the Weather and Recommended Sites widgets be customized for a personalized experience.
 
-### `npm run eject`
+### Updating the userConfig json file
+**Updating your name** into the userConfig file will allow the start page to greet you.
+**Updating your zip code** in the userConfig file will enable accurate weather informattion based on your location.
+**Updating the recommended sites list** with your personal favorite website URLs will bring your favorite websites
+to your start page.
+**Updating the background image** is another customization option. You can change the background image by pasting
+the image URL in the background image URL location in the userConfig file.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Adding the start page to FireFox
+Paste the StartPage URL into the `Homepage and new windows` option in FireFox Settings.
+Follow the [home page guide](https://support.mozilla.org/en-US/kb/how-to-set-the-home-page) for help with this step.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## The Start Page Devs:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+See more projects from James [on GitHub](https://github.com/allencpsc).
+See more projects from Nick [on GitHub](https://github.com/n1999ck).
+See more projects from Maria [on GitHub](https://github.com/TaoMaru).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
- 
-# Startpage
-Startpage is a custom browser homepage. It provides a 
 
 Startpage was created for Server-Side Web Development at Columbus State University by James Cox, Maria Jackson, and Nick Miller.
