@@ -1,3 +1,4 @@
+import CONFIG from '../userConfig.json';
 const Nav = () => {
     return(
         <nav class="navbar navbar-expand-lg navbar-dark px-3">
@@ -11,7 +12,7 @@ const Nav = () => {
                 <a class="nav-link" href="#">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#">{CONFIG.name}</a>
             </li>
             </ul>
         </div>

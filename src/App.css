@@ -1,8 +1,11 @@
-* {
+
+.title{
+  font-family:    'Stoke';
+}
+p {
   font-family: 'Montserrat',  Arial, Helvetica, sans-serif;
   color: white;
 }
-
 body {
 	font-family:  'Montserrat';
   background: #121212;
@@ -18,16 +21,17 @@ body {
   background: #1e1e1e!important;
   border-radius: 15px;
   border: 1px solid #000; 
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .list-group {
   border-top: none!important;
+  overflow: scroll;
 }
 
 .list-group-item {
   background-color: #1e1e1e;
-  border: none;
+  border-bottom: 1px solid #636363;
 }
 .icon{
   width: 32px;
@@ -50,7 +54,6 @@ a:hover {
 }
 .news-container {
   min-width: 433px;
-  max-width: 433px;
   height: 732px;
   overflow-y: scroll;
   background-color: #000;
@@ -67,7 +70,10 @@ a:hover {
 .news-headline,
 .news-source {
   margin-bottom: 0;
-  height: 60px;
+  height:fit-content;
+  overflow-y: scroll; 
+  text-indent: -0.6em;
+  text-align: justify;
 }
 
 .news-source {
@@ -115,3 +121,6 @@ a:hover {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
+.recSites {
+  height: 732px;
+}

@@ -68,3 +68,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ 
+# Startpage
+Startpage is a custom browser homepage. It provides a 
+
+Startpage was created for Server-Side Web Development at Columbus State University by James Cox, Maria Jackson, and Nick Miller.

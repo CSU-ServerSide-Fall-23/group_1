@@ -1,0 +1,99 @@
+{
+    "name": "Nick",
+    "zipCode": "31820",
+    "displaySites": true,
+    "displayNews": true,
+    "displayWeather": true,
+    "displayTrivia": true,
+    "displayQuotes": true,
+    "backgroundImage": true,
+    "backgroundImageURL": "https://images.unsplash.com/photo-1557683316-973673baf926",
+    "websites": 
+        [
+        {
+            "id": "1",
+            "name": "Wikipedia",
+            "url": "https://www.wikipedia.org/",
+            "icon": "https://icon.horse/icon/wikipedia.org"
+        },
+        {
+            "id": "2",
+            "name": "Youtube",
+            "url": "https://www.youtube.com/",
+            "icon":"https://icon.horse/icon/youtube.com"
+        },
+        {
+            "id": "3",
+            "name": "Github",
+            "url": "https://www.github.com/",
+            "icon":"https://icon.horse/icon/github.com"
+        },
+        {
+            "id": "4",
+            "name": "Columbus State",
+            "url": "https://www.columbusstate.edu/",
+            "icon":"https://icon.horse/icon/columbusstate.edu"
+        },
+        {
+            "id": "5",
+            "name": "Bootstrap Docs",
+            "url": "https://www.getbootstrap.com/",
+            "icon":"https://icon.horse/icon/getbootstrap.com/"
+        },
+        {
+            "id": "6",
+            "name": "Figma",
+            "url": "figma.com",
+            "icon":"https://icon.horse/icon/figma.com"
+        },
+        {
+            "id": "7",
+            "name": "Gmail",
+            "url": "https://mail.google.com/mail/u/0/",
+            "icon":"https://icon.horse/icon/mail.google.com/"
+        },
+        {
+            "id": "8",
+            "name": "LinkedIn",
+            "url": "https://www.linkedin.com/",
+            "icon":"https://icon.horse/icon/linkedin.com/"
+        },
+        {
+            "id": "9",
+            "name": "Hacker News",
+            "url": "https://news.ycombinator.com/",
+            "icon":"https://icon.horse/icon/news.ycombinator.com/"
+        },
+        {
+            "id": "10",
+            "name": "Canva",
+            "url": "canva.com",
+            "icon":"https://icon.horse/icon/canva.com"
+        },
+        {
+            "id": "11",
+            "name": "CougarView",
+            "url": "https://colstate.view.usg.edu/d2l/home",
+            "icon":"https://icon.horse/icon/colstate.view.usg.edu"
+        },
+        {
+            "id": "12",
+            "name": "Columbus State Library",
+            "url": "https://library.columbusstate.edu/",
+            "icon":"https://icon.horse/icon/library.columbusstate.edu/"
+        },
+        {
+            "id": "13",
+            "name": "Outlook",
+            "url": "https://outlook.office.com/mail/",
+            "icon":"https://icon.horse/icon/outlook.office.com"
+        },
+        {
+            "id": "14",
+            "name": "Neopets",
+            "url": "https://www.neopets.com/home/",
+            "icon":"https://icon.horse/icon/neopets.com"
+        }
+    ]
+    
+}
