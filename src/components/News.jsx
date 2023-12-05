@@ -16,7 +16,7 @@ const News = () => {
             }
         }
         catch(err){
-            console.log(err)
+            
         }
     }
 
